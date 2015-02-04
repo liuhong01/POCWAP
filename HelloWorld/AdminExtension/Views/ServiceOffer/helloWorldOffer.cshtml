@@ -1,0 +1,44 @@
+﻿@using Microsoft.Portal.Framework;
+@*@using Microsoft.WindowsAzure.Server.SqlAdmin.AdminExtension.Bundles;*@
+@using Microsoft.WindowsAzure.Server.ServiceBus.AdminExtension;
+
+@{
+    ViewBag.Title = "Hello World";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutMinimal.cshtml";
+}
+
+<div id="helloWorldAdminQuotasContainer" class="sqlAdminQuotas">
+    <div class="hs-empty">
+	    <div class="hs-empty-header">        
+            <p id="msg-nothing">Hello World extension does not have any quota configuration. So this page is left BLANK intentionally</p>
+	    </div>
+    </div>
+</div>
+
+@section ServiceOfferScripts {
+<script>
+    (function ($, global, undefined) {
+        "use strict";
+
+        // Putting these scripts into a bundle triggers very long and unnecessary MEF dependency resolution. So put it here instead.
+        function executeCommand(commandId, commandParameter) {
+        }
+
+        // private: Receives config from host and updates the UI
+        function initializeServiceOffer(serviceOffer) {
+        }
+
+        function initializePage() {
+            global.ServiceOffer.registerExtension({
+                initializeServiceOffer: initializeServiceOffer,
+                executeCommand: executeCommand
+            });
+        }
+
+        $(document).ready(initializePage);
+    })(jQuery, this);
+</script>
+}

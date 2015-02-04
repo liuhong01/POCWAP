@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi"
+         xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <!-- Source Locations -->
+  <?ifndef WebSiteRoot ?>
+  <?define WebSiteRoot="..\Api" ?>
+  <?endif?>
+
+  <?ifndef WebSiteRootTargetDir ?>
+  <?define WebSiteRootTargetDir="$(var.Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.TargetDir)" ?>
+  <?endif?>
+
+  <DirectoryRef Id="WEBSITEDIR">
+    <Component Id="Global.asax"
+               Guid="{A7E0587B-F7DC-46F8-ADD8-EE54EA0CE91B}">
+      <File Id="Global.asax"
+            CompanionFile="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll"
+            Source="$(var.WebSiteRoot)\Global.asax" />
+    </Component>
+    <Component Id="Web.config"
+               Guid="{356DE5E5-BFFA-4B15-9CE5-C96434CA0AB3}">
+      <File Id="Web.config"
+            CompanionFile="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll"
+            Source="$(var.WebSiteRoot)\Web.config" />
+    </Component>
+    <Component Id="Default.html"
+               Guid="{5901D4CC-33BE-4F10-AE96-E5931512DE6D}">
+      <File Id="Default.html"
+            CompanionFile="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll"
+            Source="$(var.WebSiteRoot)\Default.html" />
+    </Component>
+    <Directory Id="bin"
+               Name="bin">
+      <Component Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll"
+                 Guid="{4F87204C-1488-4427-B2E8-7DC072CBFFA8}">
+        <File Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll" />
+      </Component>
+      <Component Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll"
+                 Guid="{7FA6A671-1554-46C6-B7A2-8788502CF649}">
+        <File Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll" />
+      </Component>
+      <Component Id="Newtonsoft.Json.dll"
+                 Guid="{A24DB728-8940-41A3-8D2A-443BAA4B5EBC}">
+        <File Id="Newtonsoft.Json.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\Newtonsoft.Json.dll" />
+      </Component>
+      <Component Id="System.Net.Http.Formatting.dll"
+                 Guid="{E89D6456-0086-4644-AB74-0B0F41E8EE76}">
+        <File Id="System.Net.Http.Formatting.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\System.Net.Http.Formatting.dll" />
+      </Component>
+      <Component Id="System.Web.Http.dll"
+                 Guid="{B6C109D9-1669-4C90-8AC0-192774529A48}">
+        <File Id="System.Web.Http.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\System.Web.Http.dll" />
+      </Component>
+      <Component Id="System.Web.Http.WebHost.dll"
+                 Guid="{120E6305-4FAF-4611-A3D3-69AF48FF7AE5}">
+        <File Id="System.Web.Http.WebHost.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\System.Web.Http.WebHost.dll" />
+      </Component>
+     <Component Id="Microsoft.WindowsAzurePack.Samples.dll"
+                 Guid="{AB0A2078-E88E-424B-9453-8D96DFEAF996}">
+        <File Id="Microsoft.WindowsAzurePack.Samples.dll"
+              KeyPath="yes"
+              Source="$(var.WebSiteRootTargetDir)\Microsoft.WindowsAzurePack.Samples.dll" />
+      </Component>
+    </Directory>
+  </DirectoryRef>
+  <ComponentGroup Id="WebSiteContent">
+    <ComponentRef Id="Global.asax" />
+    <ComponentRef Id="Web.config" />
+    <ComponentRef Id="Default.html" />
+    <ComponentRef Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.dll" />
+    <ComponentRef Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll" />
+    <ComponentRef Id="Newtonsoft.Json.dll" />
+    <ComponentRef Id="System.Net.Http.Formatting.dll" />
+    <ComponentRef Id="System.Web.Http.dll" />
+    <ComponentRef Id="System.Web.Http.WebHost.dll" />
+    <ComponentRef Id="Microsoft.WindowsAzurePack.Samples.dll" />
+  </ComponentGroup>
+</Include>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uiManifest>
+  <!--HelloWorld Management-->
+  <extension name="HelloWorldAdminExtension"
+             baseUri="~/Content/HelloWorldAdmin">
+    <scripts>
+      <script src="~/Scripts/HelloWorld.Controller.js" />
+      <script src="~/Scripts/HelloWorld.FileServersTab.js" />
+      <script src="~/Scripts/HelloWorld.ProductsTab.js" />
+      <script src="~/Scripts/HelloWorld.QuickStartTab.js" />
+      <script src="~/Scripts/HelloWorld.SettingsTab.js" />
+      <script src="~/Scripts/HelloWorld.ControlsTab.js" />
+      <script src="~/HelloWorldAdminExtension.js" />
+
+      <!--Self registration-->
+      <script src="~/extensions.data.js" />
+    </scripts>
+    <stylesheets>
+      <stylesheet src="~/Styles/HelloWorldAdmin.css"/>
+      <stylesheet src="~/Styles/HelloWorldControls.css"/>
+    </stylesheets>
+    <templates>
+      <template name="fileServersTab"
+                src="~/Templates/Tabs/FileServersTab.html" />
+      <template name="fileServersTabEmpty"
+                src="~/Templates/Tabs/FileServersTabEmpty.html" />
+      <template name="productsTab"
+                src="~/Templates/Tabs/ProductsTab.html" />
+      <template name="productsTabEmpty"
+                src="~/Templates/Tabs/ProductsTabEmpty.html" />
+      <template name="quickStartTab"
+                src="~/Templates/Tabs/QuickStartTab.html" />
+      <template name="quickStartTabContent"
+                src="~/Templates/Tabs/QuickStartTabContent.html" />
+      <template name="settingsTab"
+                src="~/Templates/Tabs/SettingsTab.html" />
+      <template name="controlsTab"
+                src="~/Templates/Tabs/ControlsTab.html" />
+      <template name="registerEndpoint"
+                src="~/Templates/Dialogs/RegisterEndpoint.html" />
+    </templates>
+  </extension>
+</uiManifest>

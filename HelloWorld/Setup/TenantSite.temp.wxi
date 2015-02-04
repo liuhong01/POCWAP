@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TenantSiteContentExtDir">
+            <Component Id="BearerMessageProcessingHandler.cs" Guid="{2F995616-908D-4C0F-A1AF-7FFDFA479A8F}">
+                <File Id="BearerMessageProcessingHandler.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\BearerMessageProcessingHandler.cs" />
+            </Component>
+            <Component Id="ClientFactory.cs" Guid="{AE506027-63D6-41C7-9855-72CF8D68020F}">
+                <File Id="ClientFactory.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\ClientFactory.cs" />
+            </Component>
+            <Component Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.csproj" Guid="{09D1265D-BA0D-48B4-99ED-9332E1798B66}">
+                <File Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.csproj" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.csproj" />
+            </Component>
+            <Component Id="packages.config" Guid="{BB7D209E-467B-4FB4-AA08-1F24067CB2A8}">
+                <File Id="packages.config" KeyPath="yes" Source="$(var.TenantExtensionRoot)\packages.config" />
+            </Component>
+            <Directory Id="Content" Name="Content">
+                <Component Id="extensions.data.js" Guid="{5507F316-FEDF-4066-9EC6-1D429675FE99}">
+                    <File Id="extensions.data.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\extensions.data.js" />
+                </Component>
+                <Component Id="HelloWorldAdminExtension.js" Guid="{4B677E70-9501-4A7E-BD5E-C37D12828DA9}">
+                    <File Id="HelloWorldAdminExtension.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\HelloWorldAdminExtension.js" />
+                </Component>
+                <Component Id="testteam.png" Guid="{3DAEE83E-7D0C-44A2-B738-77A2B73EB8D0}">
+                    <File Id="testteam.png" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\testteam.png" />
+                </Component>
+                <Directory Id="Images" Name="Images">
+                    <Component Id="quickstart.png" Guid="{B8442EAB-B21C-4D9C-A8D6-4B039E2404C2}">
+                        <File Id="quickstart.png" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Images\quickstart.png" />
+                    </Component>
+                    <Component Id="quickstart_connectto.png" Guid="{C4B27BDA-F30F-470B-8094-88312780EAD1}">
+                        <File Id="quickstart_connectto.png" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Images\quickstart_connectto.png" />
+                    </Component>
+                </Directory>
+                <Directory Id="Scripts" Name="Scripts">
+                    <Component Id="HelloWorld.Controller.js" Guid="{7BD6AC88-3A1B-443A-A584-7471953F9746}">
+                        <File Id="HelloWorld.Controller.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.Controller.js" />
+                    </Component>
+                    <Component Id="HelloWorld.ControlsTab.js" Guid="{232E001B-6350-467C-8F7C-2CBBBD6B9C3D}">
+                        <File Id="HelloWorld.ControlsTab.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.ControlsTab.js" />
+                    </Component>
+                    <Component Id="HelloWorld.FileServersTab.js" Guid="{C326E0CA-7D04-48BF-B0FC-A43CF92D8241}">
+                        <File Id="HelloWorld.FileServersTab.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.FileServersTab.js" />
+                    </Component>
+                    <Component Id="HelloWorld.ProductsTab.js" Guid="{CC0AEA38-647C-41B8-AF85-58FAAEFDA07C}">
+                        <File Id="HelloWorld.ProductsTab.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.ProductsTab.js" />
+                    </Component>
+                    <Component Id="HelloWorld.QuickStartTab.js" Guid="{34560AC2-E10E-43B7-818E-99F6AFB3ECF8}">
+                        <File Id="HelloWorld.QuickStartTab.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.QuickStartTab.js" />
+                    </Component>
+                    <Component Id="HelloWorld.SettingsTab.js" Guid="{088DE7F5-3862-42B7-805F-9438565C879E}">
+                        <File Id="HelloWorld.SettingsTab.js" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Scripts\HelloWorld.SettingsTab.js" />
+                    </Component>
+                </Directory>
+                <Directory Id="Styles" Name="Styles">
+                    <Component Id="HelloWorldAdmin.css" Guid="{7EF0F803-E9E0-4A65-B59E-5940AF5BBB56}">
+                        <File Id="HelloWorldAdmin.css" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Styles\HelloWorldAdmin.css" />
+                    </Component>
+                    <Component Id="HelloWorldControls.css" Guid="{CCC68F23-7B27-4B23-95DD-9B2126522207}">
+                        <File Id="HelloWorldControls.css" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Styles\HelloWorldControls.css" />
+                    </Component>
+                </Directory>
+                <Directory Id="Templates" Name="Templates">
+                    <Directory Id="Dialogs" Name="Dialogs">
+                        <Component Id="RegisterEndpoint.html" Guid="{8C695C4B-0881-41EB-94AF-4E825C7C2184}">
+                            <File Id="RegisterEndpoint.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Dialogs\RegisterEndpoint.html" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="Tabs" Name="Tabs">
+                        <Component Id="ControlsTab.html" Guid="{749DEDDE-EEA6-4407-9828-2A1A0B15C1C4}">
+                            <File Id="ControlsTab.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\ControlsTab.html" />
+                        </Component>
+                        <Component Id="FileServersTab.html" Guid="{8D901B75-D2AF-4959-914C-5738C355B34F}">
+                            <File Id="FileServersTab.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\FileServersTab.html" />
+                        </Component>
+                        <Component Id="FileServersTabEmpty.html" Guid="{745CCA15-CD03-4D1B-B77C-04A60C22E10D}">
+                            <File Id="FileServersTabEmpty.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\FileServersTabEmpty.html" />
+                        </Component>
+                        <Component Id="ProductsTab.html" Guid="{F6A093AB-64C8-4732-87A0-2CE99846BEF5}">
+                            <File Id="ProductsTab.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\ProductsTab.html" />
+                        </Component>
+                        <Component Id="ProductsTabEmpty.html" Guid="{2FE71AB6-F33E-43C5-A708-B9F016077D4D}">
+                            <File Id="ProductsTabEmpty.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\ProductsTabEmpty.html" />
+                        </Component>
+                        <Component Id="QuickStartTab.html" Guid="{75794981-AA7B-4573-8264-6B2DAB401783}">
+                            <File Id="QuickStartTab.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\QuickStartTab.html" />
+                        </Component>
+                        <Component Id="QuickStartTabContent.html" Guid="{E7DEC732-2458-4CA4-8090-81C1233584F0}">
+                            <File Id="QuickStartTabContent.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\QuickStartTabContent.html" />
+                        </Component>
+                        <Component Id="SettingsTab.html" Guid="{D8B253B4-3E92-4954-9A75-863B7F5E7430}">
+                            <File Id="SettingsTab.html" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Content\Templates\Tabs\SettingsTab.html" />
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="Controllers" Name="Controllers">
+                <Component Id="HelloWorldAdminController.cs" Guid="{3DF18E54-C40A-468E-BAB2-06BBDF22C8E1}">
+                    <File Id="HelloWorldAdminController.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Controllers\HelloWorldAdminController.cs" />
+                </Component>
+            </Directory>
+            <Directory Id="Manifests" Name="Manifests">
+                <Component Id="HelloWorldAdminUiManifest.xml" Guid="{B84F27FD-0B06-4E5F-9908-A6CFD84A2A94}">
+                    <File Id="HelloWorldAdminUiManifest.xml" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Manifests\HelloWorldAdminUiManifest.xml" />
+                </Component>
+            </Directory>
+            <Directory Id="Models" Name="Models">
+                <Component Id="EndpointModel.cs" Guid="{120B0849-EB81-466E-B50F-85BC6136D036}">
+                    <File Id="EndpointModel.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Models\EndpointModel.cs" />
+                </Component>
+                <Component Id="FileServer.Model.cs" Guid="{26BC53B2-102A-4ED3-A793-634C4D66FD82}">
+                    <File Id="FileServer.Model.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Models\FileServer.Model.cs" />
+                </Component>
+                <Component Id="ProductModel.cs" Guid="{384F4230-32CB-475D-836C-2885433490E5}">
+                    <File Id="ProductModel.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Models\ProductModel.cs" />
+                </Component>
+            </Directory>
+            <Directory Id="Properties" Name="Properties">
+                <Component Id="AssemblyInfo.cs" Guid="{CD9DD1C5-04FF-45CA-93CE-4B16227E5874}">
+                    <File Id="AssemblyInfo.cs" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Properties\AssemblyInfo.cs" />
+                </Component>
+            </Directory>
+            <Directory Id="Views" Name="Views">
+                <Directory Id="ServiceOffer" Name="ServiceOffer">
+                    <Component Id="helloWorldOffer.cshtml" Guid="{0EDBA377-AEC6-4B74-A777-5AFE37E57A80}">
+                        <File Id="helloWorldOffer.cshtml" KeyPath="yes" Source="$(var.TenantExtensionRoot)\Views\ServiceOffer\helloWorldOffer.cshtml" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

@@ -1,0 +1,1 @@
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\Setup\bin\x64\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup.msi

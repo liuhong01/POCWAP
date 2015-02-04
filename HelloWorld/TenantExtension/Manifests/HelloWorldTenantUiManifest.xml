@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uiManifest>
+  <!--Hello World-->
+  <extension name="HelloWorldTenantExtension"
+             baseUri="~/Content/HelloWorldTenant">
+    <scripts>
+      <script src="~/Scripts/ViewModel/HW.ViewModels.QuickCreate.js" />
+      <script src="~/Scripts/HelloWorldTenant.Controller.js" />
+      <script src="~/Scripts/HelloWorldTenant.FileSharesTab.js" />
+      <script src="~/Scripts/HelloWorldTenant.SettingsTab.js" />
+      <script src="~/HelloWorldTenantExtension.js" />
+
+      <!--Self registration-->
+      <script src="~/extensions.data.js" />
+    </scripts>
+    <stylesheets>
+      <stylesheet src="~/Styles/HelloWorldTenant.css"/>
+    </stylesheets>
+    <templates>
+      <template name="customCreatePreview"
+                src="~/Templates/Dialogs/CustomCreatePreview.html" />
+      <template name="CreateFileShare"
+                src="~/Templates/Dialogs/CreateFileShare.html" />
+      <template name="FileSharesTab"
+                src="~/Templates/Tabs/FileSharesTab.html" />
+      <template name="FileSharesTabEmpty"
+                src="~/Templates/Tabs/FileSharesTabEmpty.html" />
+      <template name="settingsTab"
+                src="~/Templates/Tabs/SettingsTab.html" />
+    <template name="CreateFileShare"
+                src="~/Templates/Menu/FileShareQuickCreate.html" />
+    </templates>
+  </extension>
+</uiManifest>

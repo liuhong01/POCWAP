@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProductVersion>3.6</ProductVersion>
+    <ProjectGuid>7011f83a-8d0c-4302-bdc3-d7195c1094a7</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+  </PropertyGroup>  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DefineConstants>Debug;</DefineConstants>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Platform)\$(Configuration)\</IntermediateOutputPath>
+    <SuppressPdbOutput>True</SuppressPdbOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ARP.wxi" />
+    <Content Include="Bitmaps\bannrbmp.bmp" />
+    <Content Include="Bitmaps\dlgbmp.bmp" />
+    <Content Include="Documents\EULA.rtf" />
+    <Content Include="Feature\AdminSite.wxi" />
+    <Content Include="Feature\TenantSite.wxi" />
+    <Content Include="Icons\Windows-Azure-Dark-Blue.ico" />
+    <Content Include="Icons\Windows-Azure-Light-Blue.ico" />
+    <Content Include="PowerShell\Register-ResourceProvider.ps1" />
+    <Content Include="Prerequisites.wxi" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="Registry.wxi" />
+    <Content Include="Service\WebSite.wxi" />
+    <Content Include="Service\WebSiteContent.wxi" />
+    <Content Include="Upgrade.wxi" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons" />
+    <Folder Include="Bitmaps" />
+    <Folder Include="Documents" />
+    <Folder Include="Feature" />
+    <Folder Include="PowerShell" />
+    <Folder Include="Service" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixIIsExtension">
+      <HintPath>$(WixExtDir)\WixIIsExtension.dll</HintPath>
+      <Name>WixIIsExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixFirewallExtension">
+      <HintPath>$(WixExtDir)\WixFirewallExtension.dll</HintPath>
+      <Name>WixFirewallExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixNetFxExtension">
+      <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
+      <Name>WixNetFxExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdminExtension\Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.csproj">
+      <Name>Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension</Name>
+      <Project>{adb067c9-c4fe-483c-ba6c-6c06fad70116}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\Api\Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.csproj">
+      <Name>Microsoft.WindowsAzurePack.Samples.HelloWorld.Api</Name>
+      <Project>{f66d9400-fb56-48d4-8da3-c9ae59ad9e0d}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\TenantExtension\Microsoft.WindowsAzurePack.Samples.HelloWorld.TenantExtension.csproj">
+      <Name>Microsoft.WindowsAzurePack.Samples.HelloWorld.TenantExtension</Name>
+      <Project>{fd2b705e-7262-4bb6-871b-b9c7845c6c06}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

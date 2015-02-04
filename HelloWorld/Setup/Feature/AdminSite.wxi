@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!-- Source Locations -->
+  <?ifndef AdminExtensionRoot ?>
+  <?define AdminExtensionRoot="..\AdminExtension" ?>  
+  <?endif?>
+  
+  <?ifndef AdminExtensionTargetDir ?>
+  <?define AdminExtensionTargetDir="$(var.Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.TargetDir)" ?>
+  <?endif?>
+  
+  <DirectoryRef Id="AdminSiteBinDir">
+    <Component Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.dll"
+               Guid="{430E9349-1142-4F2F-9EB1-B4D9B087BE5E}">
+      <File Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll"
+               Guid="{AEC31E4F-1D64-4B37-B611-18BA9D16D4A8}">
+      <File Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.Common.dll"
+               Guid="{90F44EEE-9C9A-465A-8F48-CF57F9EC3F56}">
+      <File Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.Common.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.Samples.HelloWorld.Common.dll" />
+    </Component>
+    <Component Id="A_Microsoft.WindowsAzurePack.Samples.dll"
+               Guid="{691F8E74-A5F0-442A-92BE-B648D1A2B96D}">
+      <File Id="A_Microsoft.WindowsAzurePack.Samples.dll"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionTargetDir)\Microsoft.WindowsAzurePack.Samples.dll" />
+    </Component>
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteContentExtDir">
+    <Component Id="A_extensions.data.js"
+               Guid="{1422B3FA-6140-4D08-81ED-14055A7AACBB}">
+      <File Id="A_extensions.data.js"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\extensions.data.js" />
+    </Component>
+    <Component Id="A_HelloWorldAdminExtension.js"
+               Guid="{821EF1B7-E509-40C0-97DE-E1AA58E01085}">
+      <File Id="A_HelloWorldAdminExtension.js"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\HelloWorldAdminExtension.js" />
+    </Component>
+    <Component Id="A_testteam.png"
+               Guid="{085379A1-DD17-4D0D-B9B3-C43F75BC78E2}">
+      <File Id="A_testteam.png"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Content\testteam.png" />
+    </Component>
+    <Directory Id="A_Images"
+               Name="Images">
+      <Component Id="A_quickstart.png"
+                 Guid="{BE3E67F1-DAF6-48BD-82F6-02C49E32F2D1}">
+        <File Id="A_quickstart.png"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Images\quickstart.png" />
+      </Component>
+      <Component Id="A_quickstart_connectto.png"
+                 Guid="{8E98C071-A934-413A-B80C-0C9B341301C6}">
+        <File Id="A_quickstart_connectto.png"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Images\quickstart_connectto.png" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Scripts"
+               Name="Scripts">
+      <Component Id="A_HelloWorld.Controller.js"
+                 Guid="{EB5C7555-8B23-4649-A7CC-B0F8E4FA1F52}">
+        <File Id="A_HelloWorld.Controller.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.Controller.js" />
+      </Component>
+      <Component Id="A_HelloWorld.FileServersTab.js"
+                 Guid="{575E3B2A-3C69-43A9-AC08-008C43C28EB2}">
+        <File Id="A_HelloWorld.FileServersTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.FileServersTab.js" />
+      </Component>
+      <Component Id="A_HelloWorld.ProductsTab.js"
+                 Guid="{A24BDDA9-F21D-476D-BE71-F622F3C9BA03}">
+        <File Id="A_HelloWorld.ProductsTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.ProductsTab.js" />
+      </Component>
+      <Component Id="A_HelloWorld.QuickStartTab.js"
+                 Guid="{82867C63-52CE-4A42-B61E-8A0F8646C7AC}">
+        <File Id="A_HelloWorld.QuickStartTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.QuickStartTab.js" />
+      </Component>
+      <Component Id="A_HelloWorld.SettingsTab.js"
+                 Guid="{CC2E7B2E-3CBA-40E7-8F4E-2AECC0D23C74}">
+        <File Id="A_HelloWorld.SettingsTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.SettingsTab.js" />
+      </Component>
+      <Component Id="A_HelloWorld.ControlsTab.js"
+                 Guid="{841E6FF4-28A4-43C1-85B2-74E237239E38}">
+        <File Id="A_HelloWorld.ControlsTab.js"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Scripts\HelloWorld.ControlsTab.js" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Styles"
+               Name="Styles">
+      <Component Id="A_HelloWorldAdmin.css"
+                 Guid="{A7D89E16-A565-435B-9B46-E28BF9EBE1F5}">
+        <File Id="A_HelloWorldAdmin.css"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Styles\HelloWorldAdmin.css" />
+      </Component>
+      <Component Id="A_HelloWorldControls.css"
+                 Guid="{6C310CD2-D5BE-4CF3-97BB-C07615D24A14}">
+        <File Id="A_HelloWorldControls.css"
+              KeyPath="yes"
+              Source="$(var.AdminExtensionRoot)\Content\Styles\HelloWorldControls.css" />
+      </Component>
+    </Directory>
+    <Directory Id="A_Templates"
+               Name="Templates">
+      <Directory Id="A_Dialogs"
+                 Name="Dialogs">
+        <Component Id="A_RegisterEndpoint.html"
+                   Guid="{A19EEDDB-F3AA-4730-BC6F-BEC02112058A}">
+          <File Id="A_RegisterEndpoint.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Dialogs\RegisterEndpoint.html" />
+        </Component>
+      </Directory>
+      <Directory Id="A_Tabs"
+                 Name="Tabs">
+        <Component Id="A_FileServersTab.html"
+                   Guid="{E4C423FA-85C1-41E3-9F2D-B53FAAEB890B}">
+          <File Id="A_FileServersTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\FileServersTab.html" />
+        </Component>
+        <Component Id="A_FileServersTabEmpty.html"
+                   Guid="{FCBA83D2-0111-4451-B182-CB0D1E483CD5}">
+          <File Id="A_FileServersTabEmpty.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\FileServersTabEmpty.html" />
+        </Component>
+        <Component Id="A_ProductsTab.html"
+                   Guid="{8BBBF42C-D3C6-451E-9CA6-4D44A10DB67F}">
+          <File Id="A_ProductsTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\ProductsTab.html" />
+        </Component>
+        <Component Id="A_ProductsTabEmpty.html"
+                   Guid="{34795456-4126-445E-A8A6-ABF7A493652F}">
+          <File Id="A_ProductsTabEmpty.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\ProductsTabEmpty.html" />
+        </Component>
+        <Component Id="A_QuickStartTab.html"
+                   Guid="{5B00D137-9325-4B88-9EE9-93EF13D4C2B4}">
+          <File Id="A_QuickStartTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\QuickStartTab.html" />
+        </Component>
+        <Component Id="A_QuickStartTabContent.html"
+                   Guid="{D3CB5A20-4BF9-486A-A3F2-69F78F42BFCB}">
+          <File Id="A_QuickStartTabContent.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\QuickStartTabContent.html" />
+        </Component>
+        <Component Id="A_SettingsTab.html"
+                   Guid="{F3069569-D695-4755-BC95-669EF21323DC}">
+          <File Id="A_SettingsTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\SettingsTab.html" />
+        </Component>
+        <Component Id="A_ContorlsTab.html"
+                   Guid="{83BC26ED-7A00-4CD1-A7B9-C4D9D181907C}">
+          <File Id="A_ContorlsTab.html"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Content\Templates\Tabs\ControlsTab.html" />
+        </Component>
+      </Directory>
+    </Directory>    
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteManifestsDir">
+    <Component Id="A_HelloWorldAdminUiManifest.xml"
+               Guid="{FE2E5FBF-C3A0-4402-B08C-357847FE3B4C}">
+      <File Id="A_HelloWorldAdminUiManifest.xml"
+            KeyPath="yes"
+            Source="$(var.AdminExtensionRoot)\Manifests\HelloWorldAdminUiManifest.xml" />
+    </Component>
+  </DirectoryRef>
+  <DirectoryRef Id="AdminSiteViewsDir">   
+      <Directory Id="A_ServiceOffer" Name="ServiceOffer">
+        <Component Id="A_HelloWorldOffer.cshtml" Guid="{068988f1-0b2a-443b-a599-fd37bf88cb33}">
+          <File Id="A_HelloWorldOffer.cshtml"
+                KeyPath="yes"
+                Source="$(var.AdminExtensionRoot)\Views\ServiceOffer\helloWorldOffer.cshtml" />
+        </Component>
+      </Directory>
+   </DirectoryRef>
+  <ComponentGroup Id="AdminSiteContent">
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.AdminExtension.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.Samples.HelloWorld.Common.dll" />
+    <ComponentRef Id="A_Microsoft.WindowsAzurePack.Samples.dll" />
+    <ComponentRef Id="A_extensions.data.js" />
+    <ComponentRef Id="A_HelloWorldAdminExtension.js" />
+    <ComponentRef Id="A_testteam.png" />
+    <ComponentRef Id="A_quickstart.png" />
+    <ComponentRef Id="A_quickstart_connectto.png" />
+    <ComponentRef Id="A_HelloWorld.Controller.js" />
+    <ComponentRef Id="A_HelloWorld.FileServersTab.js" />
+    <ComponentRef Id="A_HelloWorld.ProductsTab.js" />
+    <ComponentRef Id="A_HelloWorld.QuickStartTab.js" />
+    <ComponentRef Id="A_HelloWorld.SettingsTab.js" />
+    <ComponentRef Id="A_HelloWorld.ControlsTab.js" />
+    <ComponentRef Id="A_HelloWorldAdmin.css" />
+    <ComponentRef Id="A_HelloWorldControls.css" />
+    <ComponentRef Id="A_RegisterEndpoint.html" />
+    <ComponentRef Id="A_FileServersTab.html" />
+    <ComponentRef Id="A_FileServersTabEmpty.html" />
+    <ComponentRef Id="A_ProductsTab.html" />
+    <ComponentRef Id="A_ProductsTabEmpty.html" />
+    <ComponentRef Id="A_QuickStartTab.html" />
+    <ComponentRef Id="A_QuickStartTabContent.html" />
+    <ComponentRef Id="A_SettingsTab.html" />
+    <ComponentRef Id="A_ContorlsTab.html" />
+    <ComponentRef Id="A_HelloWorldAdminUiManifest.xml" />
+    <ComponentRef Id="A_HelloWorldOffer.cshtml" />
+  </ComponentGroup>
+</Include>

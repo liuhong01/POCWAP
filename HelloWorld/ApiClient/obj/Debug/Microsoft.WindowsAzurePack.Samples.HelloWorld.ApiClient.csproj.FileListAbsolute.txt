@@ -1,0 +1,14 @@
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll.config
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.pdb
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Web.Http.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Web.Http.xml
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\obj\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.dll
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\ApiClient\obj\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.ApiClient.pdb

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="WEBSITEDIR">
+            <Component Id="Default.html" Guid="{10CBBF2A-3146-48B2-8264-7AD7E87BC1D3}">
+                <File Id="Default.html" KeyPath="yes" Source="$(var.WebSiteRoot)\Default.html" />
+            </Component>
+            <Component Id="ErrorMessages.Designer.cs" Guid="{0FE74B79-C9CD-4F93-A4A2-438E5830EB51}">
+                <File Id="ErrorMessages.Designer.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\ErrorMessages.Designer.cs" />
+            </Component>
+            <Component Id="ErrorMessages.resx" Guid="{589D9F14-A2EA-43F6-8FC5-9237248AE289}">
+                <File Id="ErrorMessages.resx" KeyPath="yes" Source="$(var.WebSiteRoot)\ErrorMessages.resx" />
+            </Component>
+            <Component Id="Global.asax" Guid="{BB14AF88-70A5-4559-A1FE-8536750C1BB8}">
+                <File Id="Global.asax" KeyPath="yes" Source="$(var.WebSiteRoot)\Global.asax" />
+            </Component>
+            <Component Id="Global.asax.cs" Guid="{EA997A4D-66EE-4DB3-9746-1EFB9C4D4DA2}">
+                <File Id="Global.asax.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Global.asax.cs" />
+            </Component>
+            <Component Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.csproj" Guid="{F56A77EF-30E6-4FA5-A5D6-6A0C94911BBF}">
+                <File Id="Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.csproj" KeyPath="yes" Source="$(var.WebSiteRoot)\Microsoft.WindowsAzurePack.Samples.HelloWorld.Api.csproj" />
+            </Component>
+            <Component Id="packages.config" Guid="{783A34F1-CD74-4CA4-88F1-96156F0078C0}">
+                <File Id="packages.config" KeyPath="yes" Source="$(var.WebSiteRoot)\packages.config" />
+            </Component>
+            <Component Id="Utility.cs" Guid="{C66C3B9F-2FAD-4262-BBDA-73952D518D45}">
+                <File Id="Utility.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Utility.cs" />
+            </Component>
+            <Component Id="Web.config" Guid="{A52AA077-ACE3-481F-B512-EC75951DDE38}">
+                <File Id="Web.config" KeyPath="yes" Source="$(var.WebSiteRoot)\Web.config" />
+            </Component>
+            <Component Id="Web.Debug.config" Guid="{662DBA1A-3EFD-442C-853E-1BA17D64449B}">
+                <File Id="Web.Debug.config" KeyPath="yes" Source="$(var.WebSiteRoot)\Web.Debug.config" />
+            </Component>
+            <Component Id="Web.Release.config" Guid="{4947E0F4-1B3A-45ED-97B6-11CE7DE2FCF2}">
+                <File Id="Web.Release.config" KeyPath="yes" Source="$(var.WebSiteRoot)\Web.Release.config" />
+            </Component>
+            <Directory Id="App_Start" Name="App_Start">
+                <Component Id="FilterConfig.cs" Guid="{FF491980-0878-49D4-8612-8F99D9A79963}">
+                    <File Id="FilterConfig.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\App_Start\FilterConfig.cs" />
+                </Component>
+                <Component Id="WebApiConfig.cs" Guid="{CFAD9157-A84B-41CC-8936-CEB078C1CE2E}">
+                    <File Id="WebApiConfig.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\App_Start\WebApiConfig.cs" />
+                </Component>
+            </Directory>
+            <Directory Id="Controllers" Name="Controllers">
+                <Component Id="AdminSettingsController.cs" Guid="{708C8D93-68D8-40C2-81AB-B5E9976A65F7}">
+                    <File Id="AdminSettingsController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\AdminSettingsController.cs" />
+                </Component>
+                <Component Id="FileServersController.cs" Guid="{182F83B5-006D-405D-A5B2-B807BD6C1079}">
+                    <File Id="FileServersController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\FileServersController.cs" />
+                </Component>
+                <Component Id="FileShareController.cs" Guid="{325D4C4B-7B0D-4AC7-A447-DB76D789E83E}">
+                    <File Id="FileShareController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\FileShareController.cs" />
+                </Component>
+                <Component Id="ProductsController.cs" Guid="{A5653E9C-83C6-4952-A651-FA8BDAADC3AA}">
+                    <File Id="ProductsController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\ProductsController.cs" />
+                </Component>
+                <Component Id="QuotaController.cs" Guid="{1F1B5FBD-F4A2-483E-A1C5-8F3E8B818294}">
+                    <File Id="QuotaController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\QuotaController.cs" />
+                </Component>
+                <Component Id="SubscriptionsController.cs" Guid="{9A2C8F85-DC6B-44DE-8DD0-F336ADB3D5CA}">
+                    <File Id="SubscriptionsController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\SubscriptionsController.cs" />
+                </Component>
+                <Component Id="UsageController.cs" Guid="{66A69F3B-01DD-4138-84B0-8C961644F793}">
+                    <File Id="UsageController.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Controllers\UsageController.cs" />
+                </Component>
+            </Directory>
+            <Directory Id="Properties" Name="Properties">
+                <Component Id="AssemblyInfo.cs" Guid="{4BBD6A08-CB24-4861-AD7F-0B3365DC1307}">
+                    <File Id="AssemblyInfo.cs" KeyPath="yes" Source="$(var.WebSiteRoot)\Properties\AssemblyInfo.cs" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

@@ -1,0 +1,76 @@
+.fxshell-drawer-menu li div.icon.DomainTenant {
+    background-position: 0 -97px;
+}
+
+.hw-search-container {
+    width: 350px;
+}
+
+.hw-radio-container {
+    margin-bottom: 10px;
+}
+
+    .hw-radio-container label {
+        display: inline;
+        font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+        font-size: 12px;
+        margin-left: 5px;
+        text-transform: none;
+        vertical-align: middle;
+    }
+
+    .hw-radio-container input {
+        vertical-align: middle;
+    }
+
+#hw-settings input[type="text"], #dm-settings input[type="password"] {
+    padding: 4px;
+    width: 200px;
+}
+
+.aux-readonlyvalue > .hw-contact-line {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+    .aux-readonlyvalue > .hw-contact-line.first-line {
+        margin-top: 10px;
+    }
+
+    .aux-readonlyvalue > .hw-contact-line.last-line {
+        margin-bottom: 20px;
+    }
+
+.hw-info-value {
+    width: 550px;
+}
+
+.hw-create-grid-container .fx-grid-container {
+    width: 550px;
+    height: 215px;
+}
+
+.hw-create-grid-container.large .fx-grid-container {
+    /* Use a larger grid when we hide the subscription selector */
+    width: 550px;
+    height: 400px;
+}
+
+.hw-grid-scroller {
+    margin: 0px;
+    overflow: auto;
+    padding: 0px;
+}
+
+.hw-contactinfo-scroller {
+    height: 380px;
+    margin-bottom: 29px;
+    overflow: auto;
+    width: 450px;
+}
+
+.hw-settingsTab {
+    width: 95%;
+}

@@ -1,0 +1,5 @@
+C:\Users\liuhong\Documents\Microsoft.WindowsAzurePack.Samples\HelloWorld\Setup\bin\x64\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup.msi
+obj\x64\Debug\Product.wixobj
+obj\x64\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup.wixproj.BindContentsFileListnull.txt
+obj\x64\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup.wixproj.BindOutputsFileListnull.txt
+obj\x64\Debug\Microsoft.WindowsAzurePack.Samples.HelloWorld.Setup.wixproj.BindBuiltOutputsFileListnull.txt
